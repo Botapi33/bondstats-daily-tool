@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BondStats Daily Yields</title>
+  <style>
+    :root{
+      --bg:#0b1422;
+      --panel:#111c2d;
+      --panel2:#162338;
+      --border:#24364f;
+      --text:#f3f6fb;
+      --muted:#cfd8e6;
+      --soft:#9db0c8;
+      --accent:#86b7ff;
+      --max:1100px;
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      background:linear-gradient(180deg,#08111d 0%, #0b1422 100%);
+      color:var(--text);
+    }
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:28px 18px 40px;
+    }
+    .hero,.panel,.card{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+    }
+    .hero,.panel{padding:24px}
+    .hero{margin-bottom:18px}
+    h1{margin:0 0 10px;font-size:40px}
+    h2{margin:0 0 10px;font-size:28px}
+    p{color:var(--muted)}
+    .meta{font-size:14px;color:var(--soft)}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:16px;
+      margin-top:18px;
+    }
+    .card{
+      padding:18px;
+      background:var(--panel2);
+    }
+    .label{
+      color:var(--soft);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+      margin-bottom:8px;
+      display:block;
+      font-weight:700;
+    }
+    .value{
+      font-size:30px;
+      font-weight:700;
+      margin-bottom:6px;
+    }
+    .small{
+      color:var(--soft);
+      font-size:14px;
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:8px;
+    }
+    th,td{
+      text-align:left;
+      padding:14px 10px;
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    th{
+      color:var(--soft);
+      font-size:13px;
+      text-transform:uppercase;
+    }
+    @media (max-width: 860px){
+      .grid{grid-template-columns:1fr}
+      h1{font-size:32px}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>BondStats Daily Yields</h1>
+      <p>Daily-updated sovereign yield reference using FRED data. Some international series update monthly depending on source frequency.</p>
+      <div class="meta" id="meta">Loading...</div>
+    </section>
+
+    <section class="panel">
+      <h2>Key Markets</h2>
+      <div class="grid" id="cards"></div>
+    </section>
+
+    <section class="panel" style="margin-top:18px;">
+      <h2>All Series</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Latest</th>
+            <th>Date</th>
+            <th>Previous</th>
+            <th>Change</th>
+            <th>Frequency</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script>
+    function fmt(v){
+      if (v === null || v === undefined) return "—";
+      return v.toFixed(2) + "%";
+    }
+
+    function fmtChange(v){
+      if (v === null || v === undefined) return "—";
+      const sign = v > 0 ? "+" : "";
+      return sign + v.toFixed(2) + "pp";
+    }
+
+    fetch("./data.json", { cache: "no-store" })
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById("meta").textContent =
+          "Last updated: " + data.meta.lastUpdated + " • Source: " + data.meta.source;
+
+        const cards = document.getElementById("cards");
+        const tbody = document.getElementById("table-body");
+
+        data.countries.forEach(row => {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+            <span class="label">${row.label}</span>
+            <div class="value">${fmt(row.value)}</div>
+            <div class="small">Date: ${row.date}</div>
+            <div class="small">Change vs prior: ${fmtChange(row.change)}</div>
+            <div class="small">Frequency: ${row.sourceFrequency}</div>
+          `;
+          cards.appendChild(card);
+
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>${row.country}</td>
+            <td>${fmt(row.value)}</td>
+            <td>${row.date}</td>
+            <td>${fmt(row.previousValue)}</td>
+            <td>${fmtChange(row.change)}</td>
+            <td>${row.sourceFrequency}</td>
+          `;
+          tbody.appendChild(tr);
+        });
+      });
+  </script>
+</body>
+</html>
