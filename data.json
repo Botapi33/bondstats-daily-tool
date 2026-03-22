@@ -3,8 +3,53 @@
     "title": "BondStats Daily Yields",
     "source": "FRED",
     "frequency": "Daily run",
-    "lastUpdated": "",
+    "lastUpdated": "2026-03-22",
     "note": "Some international series update monthly depending on source frequency."
   },
-  "countries": []
+  "countries": [
+    {
+      "country": "United States",
+      "label": "US 10Y",
+      "seriesId": "DGS10",
+      "sourceFrequency": "Daily",
+      "date": "2026-03-19",
+      "value": 4.25,
+      "previousDate": "2026-03-18",
+      "previousValue": 4.26,
+      "change": -0.009999999999999787
+    },
+    {
+      "country": "Germany",
+      "label": "Germany 10Y",
+      "seriesId": "IRLTLT01DEM156N",
+      "sourceFrequency": "Monthly",
+      "date": "2026-01-01",
+      "value": 2.80666666666667,
+      "previousDate": "2025-12-01",
+      "previousValue": 2.81421052631579,
+      "change": -0.007543859649119966
+    },
+    {
+      "country": "United Kingdom",
+      "label": "UK 10Y",
+      "seriesId": "IRLTLT01GBM156N",
+      "sourceFrequency": "Monthly",
+      "date": "2026-02-01",
+      "value": 4.4324,
+      "previousDate": "2026-01-01",
+      "previousValue": 4.451,
+      "change": -0.018599999999999284
+    },
+    {
+      "country": "Japan",
+      "label": "Japan 10Y",
+      "seriesId": "IRLTLT01JPM156N",
+      "sourceFrequency": "Monthly",
+      "date": "2026-02-01",
+      "value": 2.11,
+      "previousDate": "2026-01-01",
+      "previousValue": 2.24,
+      "change": -0.13000000000000034
+    }
+  ]
 }
