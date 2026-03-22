@@ -1,0 +1,10 @@
+{
+  "meta": {
+    "title": "BondStats Daily Yields",
+    "source": "FRED",
+    "frequency": "Daily run",
+    "lastUpdated": "",
+    "note": "Some international series update monthly depending on source frequency."
+  },
+  "countries": []
+}
