@@ -3,7 +3,7 @@
     "title": "BondStats Daily Yields",
     "source": "FRED",
     "frequency": "Daily run",
-    "lastUpdated": "2026-05-15",
+    "lastUpdated": "2026-05-16",
     "note": "Some international series update monthly depending on source frequency."
   },
   "countries": [
@@ -12,44 +12,44 @@
       "label": "US 10Y",
       "seriesId": "DGS10",
       "sourceFrequency": "Daily",
-      "date": "2026-05-13",
-      "value": 4.46,
-      "previousDate": "2026-05-12",
+      "date": "2026-05-14",
+      "value": 4.47,
+      "previousDate": "2026-05-13",
       "previousValue": 4.46,
-      "change": 0.0
+      "change": 0.009999999999999787
     },
     {
       "country": "Germany",
       "label": "Germany 10Y",
       "seriesId": "IRLTLT01DEM156N",
       "sourceFrequency": "Monthly",
-      "date": "2026-03-01",
-      "value": 2.9052380952,
-      "previousDate": "2026-02-01",
-      "previousValue": 2.745,
-      "change": 0.16023809519999999
+      "date": "2026-04-01",
+      "value": 2.9963157895,
+      "previousDate": "2026-03-01",
+      "previousValue": 2.91,
+      "change": 0.08631578949999996
     },
     {
       "country": "United Kingdom",
       "label": "UK 10Y",
       "seriesId": "IRLTLT01GBM156N",
       "sourceFrequency": "Monthly",
-      "date": "2026-03-01",
-      "value": 4.7007,
-      "previousDate": "2026-02-01",
-      "previousValue": 4.4324,
-      "change": 0.2683
+      "date": "2026-04-01",
+      "value": 4.8207,
+      "previousDate": "2026-03-01",
+      "previousValue": 4.7007,
+      "change": 0.1200000000000001
     },
     {
       "country": "Japan",
       "label": "Japan 10Y",
       "seriesId": "IRLTLT01JPM156N",
       "sourceFrequency": "Monthly",
-      "date": "2026-03-01",
-      "value": 2.345,
-      "previousDate": "2026-02-01",
-      "previousValue": 2.11,
-      "change": 0.23500000000000032
+      "date": "2026-04-01",
+      "value": 2.515,
+      "previousDate": "2026-03-01",
+      "previousValue": 2.345,
+      "change": 0.16999999999999993
     }
   ]
 }
