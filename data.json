@@ -3,7 +3,7 @@
     "title": "BondStats Daily Yields",
     "source": "FRED",
     "frequency": "Daily run",
-    "lastUpdated": "2026-07-16",
+    "lastUpdated": "2026-07-17",
     "note": "Some international series update monthly depending on source frequency."
   },
   "countries": [
@@ -12,44 +12,44 @@
       "label": "US 10Y",
       "seriesId": "DGS10",
       "sourceFrequency": "Daily",
-      "date": "2026-07-14",
-      "value": 4.58,
-      "previousDate": "2026-07-13",
-      "previousValue": 4.62,
-      "change": -0.040000000000000036
+      "date": "2026-07-15",
+      "value": 4.55,
+      "previousDate": "2026-07-14",
+      "previousValue": 4.58,
+      "change": -0.03000000000000025
     },
     {
       "country": "Germany",
       "label": "Germany 10Y",
       "seriesId": "IRLTLT01DEM156N",
       "sourceFrequency": "Monthly",
-      "date": "2026-05-01",
-      "value": 3.0465,
-      "previousDate": "2026-04-01",
-      "previousValue": 3.001,
-      "change": 0.045500000000000096
+      "date": "2026-06-01",
+      "value": 2.97,
+      "previousDate": "2026-05-01",
+      "previousValue": 3.0465,
+      "change": -0.07649999999999979
     },
     {
       "country": "United Kingdom",
       "label": "UK 10Y",
       "seriesId": "IRLTLT01GBM156N",
       "sourceFrequency": "Monthly",
-      "date": "2026-05-01",
-      "value": 4.9416,
-      "previousDate": "2026-04-01",
-      "previousValue": 4.8207,
-      "change": 0.12089999999999979
+      "date": "2026-06-01",
+      "value": 4.796,
+      "previousDate": "2026-05-01",
+      "previousValue": 4.9416,
+      "change": -0.14559999999999995
     },
     {
       "country": "Japan",
       "label": "Japan 10Y",
       "seriesId": "IRLTLT01JPM156N",
       "sourceFrequency": "Monthly",
-      "date": "2026-05-01",
-      "value": 2.65,
-      "previousDate": "2026-04-01",
-      "previousValue": 2.515,
-      "change": 0.1349999999999998
+      "date": "2026-06-01",
+      "value": 2.67,
+      "previousDate": "2026-05-01",
+      "previousValue": 2.65,
+      "change": 0.020000000000000018
     }
   ]
 }
