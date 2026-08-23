@@ -3,7 +3,7 @@
     "title": "BondStats Daily Yields",
     "source": "FRED",
     "frequency": "Daily run",
-    "lastUpdated": "2026-08-22",
+    "lastUpdated": "2026-08-23",
     "note": "Some international series update monthly depending on source frequency."
   },
   "countries": [
