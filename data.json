@@ -3,7 +3,7 @@
     "title": "BondStats Daily Yields",
     "source": "FRED",
     "frequency": "Daily run",
-    "lastUpdated": "2026-09-29",
+    "lastUpdated": "2026-09-30",
     "note": "Some international series update monthly depending on source frequency."
   },
   "countries": [
@@ -12,11 +12,11 @@
       "label": "US 10Y",
       "seriesId": "DGS10",
       "sourceFrequency": "Daily",
-      "date": "2026-09-25",
-      "value": 5.17,
-      "previousDate": "2026-09-24",
-      "previousValue": 5.18,
-      "change": -0.009999999999999787
+      "date": "2026-09-28",
+      "value": 5.24,
+      "previousDate": "2026-09-25",
+      "previousValue": 5.17,
+      "change": 0.07000000000000028
     },
     {
       "country": "Germany",
